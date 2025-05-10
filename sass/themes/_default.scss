@@ -1,9 +1,13 @@
 @use "../abstracts/abstracts" as *;
 
 html * {
-  font-family: $roboto-font;
+  font-family: $primary-font;
 }
 
 body {
   overflow-x: hidden;
+}
+
+li {
+  list-style: none;
 }

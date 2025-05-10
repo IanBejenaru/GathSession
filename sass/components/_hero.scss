@@ -1,0 +1,113 @@
+@use "../abstracts/abstracts" as *;
+
+.hero {
+    display: flex;
+
+    &__container {
+        padding-top: 35px;
+        width: 50%;
+        h1 {
+            color: white;
+            font-family: $secondary-font;
+            font-size: 120px;
+            font-weight: 600;
+            letter-spacing: 15px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            color: $color-secondary;
+            width: 65%;
+            font-size: 30PX;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__button {
+        margin-bottom: 144px;
+        ul {
+            display: flex;
+            gap: 101px;
+            align-items: baseline;
+            li a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+
+                &.btn {
+                    @include btn-naranja();
+                }
+            }
+
+            li:nth-child(2) {
+                position: relative;
+                text-decoration: underline white 2px;
+                img {
+                    position: absolute;
+                    left: 130px;
+                    bottom: -7px;
+                }
+            }
+        }
+    }
+
+    &__img {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 4 columnas iguales */
+        grid-template-rows: repeat(6, 100px);  /* 4 filas de 100px de alto */
+        gap: 32px; /* espacio entre celdas */
+
+        :first-child {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        :nth-child(2) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 5;
+        }
+
+        :nth-child(3) {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        }
+
+        :nth-child(4) {
+            grid-column: 2 / 3;
+            grid-row: 3 / 6;
+        }
+
+        :nth-child(5) {
+            grid-column: 3 / 3;
+            grid-row: 2 / 5;
+        }
+    }
+    
+}
+
+.hero-iconos {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 117px;
+
+    &__item {
+        display: flex;
+        gap: 16px;
+        width: 200px;
+
+        &:nth-child(2) {
+            width: 150px;
+        }
+
+        &-img {
+            padding: 12px;
+            background-color: rgba($color-secondary, 0.5);
+            border-radius: 16px;
+        }
+
+        &-title {
+            color: white;
+            //width: 50%;
+        }
+    }
+}
